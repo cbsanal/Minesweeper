@@ -1,0 +1,17 @@
+@mixin borders($left-top, $right-bottom) {
+  border: solid 4px;
+  border-right-color: $right-bottom;
+  border-bottom-color: $right-bottom;
+  border-left-color: $left-top;
+  border-top-color: $left-top;
+}
+
+@mixin flex($justify: space-between, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin button {
+}

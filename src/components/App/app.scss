@@ -1,0 +1,46 @@
+@use "../../styles/index.scss" as mixins;
+
+.app {
+  background-color: #c2c2c2;
+  padding: 16px;
+  @include mixins.borders(#fff, #999);
+}
+
+.header {
+  background-color: #c0c0c0;
+  padding: 10px 12px;
+  @include mixins.borders(#7b7b7b, #fff);
+  @include mixins.flex();
+}
+
+.body {
+  margin-top: 16px;
+  @include mixins.borders(#7b7b7b, #fff);
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.face {
+  width: 52px;
+  height: 52px;
+  font-size: 35px;
+  cursor: pointer;
+  @include mixins.borders(#fff, #7b7b7b);
+  @include mixins.flex(center);
+  span {
+    position: relative;
+    top: -1px;
+  }
+  &:active {
+    @include mixins.borders(#7b7b7b, #fff);
+  }
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: none;
+}
